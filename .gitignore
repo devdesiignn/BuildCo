@@ -1,0 +1,11 @@
+css/*.css.map
+css/*.css
+!css/style.css
+!css/style.min.css
+img/svg/
+node_modules/
+sass/
+buildco-ui.png
+codes.txt
+*.json
+!package.json
