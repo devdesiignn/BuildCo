@@ -1,0 +1,53 @@
+.form {
+  &__col {
+    display: flex;
+
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+
+    @include viewport(phone){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__group {
+    width: 100%;
+  }
+
+  &__label {
+    display: block;
+    font-size: $default-size;
+    font-weight: 700;
+    color: $color-black;
+    font-family: inherit;
+    margin-bottom: 1rem;
+  }
+
+  &__input,
+  &__textarea {
+    display: block;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    border: 2px solid $color-gray-bg-2;
+    border-radius: 8px;
+    font-size: inherit;
+    font-weight: 300;
+    font-family: inherit;
+    transition: all 0.4s;
+
+    background-color: rgba($color-white, 0.5);
+
+    &:focus {
+      outline-color: $color-primary;
+    }
+    &:invalid {
+      outline-color: red;
+    }
+  }
+
+  &__textarea {
+    height: 24rem;
+    resize: vertical;
+  }
+}

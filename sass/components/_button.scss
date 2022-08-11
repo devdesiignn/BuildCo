@@ -1,0 +1,54 @@
+.btn {
+  font-weight: 300;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+
+  box-shadow: $shadow-1;
+
+  display: inline-block;
+
+  transition: all 0.4s;
+
+  &:link,
+  &:visited {
+    font-weight: 300;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+
+    text-decoration: none;
+    box-shadow: $shadow-1;
+
+    display: inline-block;
+
+    transition: all 0.4s;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $shadow-2;
+    }
+  }
+  
+  &:active {
+    transform: translateY(1px);
+    box-shadow: $shadow-3;
+  }
+
+  &--green {
+    color: $color-white;
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+  }
+
+  &--white {
+    color: $color-primary;
+    background-color: $color-white;
+
+    border: 1px solid currentColor;
+  }
+}

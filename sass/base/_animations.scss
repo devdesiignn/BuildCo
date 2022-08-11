@@ -1,0 +1,22 @@
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}

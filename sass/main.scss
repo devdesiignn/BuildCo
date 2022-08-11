@@ -1,0 +1,19 @@
+//FONTS
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+//SASS MINI-FILES
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/button";
+@import "components/form";
+
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";

@@ -1,0 +1,93 @@
+.heading-primary {
+  color: $color-black;
+  line-height: 1.4;
+  font-size: 4rem;
+
+  @include viewport(tab-port) {
+    font-size: 3.2rem;
+  }
+
+  @include viewport(phone) {
+    font-size: 2.8rem;
+  }
+
+  @media only screen and (max-width: 25em) {
+    font-size: 2.6rem;
+  }
+
+  &--sub {
+    font-weight: 300;
+    display: block;
+  }
+
+  &--main {
+    font-weight: 700;
+    display: block;
+
+    .emphasis {
+      color: $color-primary;
+    }
+  }
+}
+
+.heading-sub {
+  color: $color-gray-text;
+  font-size: 2rem;
+  padding-right: 12rem;
+
+  @include viewport(tab-port) {
+    font-size: $default-size;
+  }
+
+  @media only screen and (max-width: 50em) {
+    padding: 0;
+  }
+}
+
+.heading-tertiary {
+  font-weight: 300;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: $color-primary;
+
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 1px;
+    left: 0;
+    background-color: currentColor;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: transform 0.4s;
+    transition: transform 0.4s;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100%;
+  }
+  
+  @media (hover: hover) {
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: 0;
+    }
+  }
+}
+
+.heading-secondary {
+  font-weight: 700;
+  color: $color-black;
+  font-size: 2.4rem;
+}
+
+.paragraph {
+  line-height: 2;
+  color: $color-gray-text;
+}
+
+.copyright {
+  font-weight: 300;
+}

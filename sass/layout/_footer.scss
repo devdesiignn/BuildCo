@@ -1,0 +1,123 @@
+.footer {
+  padding: 4rem;
+
+  @include viewport(phone) {
+    padding: 2rem;
+  }
+
+  color: $color-white;
+  background-color: $color-primary-dark;
+
+  &__row-1 {
+    display: flex;
+    justify-content: space-around;
+
+    @include viewport(tab-port) {
+      justify-content: space-between;
+    }
+
+    @media only screen and (max-width: 50em) {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+
+  &__box {
+    @media only screen and (max-width: 50em) {
+      flex-basis: 45%;
+    }
+  }
+
+  &__row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid currentColor;
+    padding-top: 2rem;
+
+    flex-wrap: wrap;
+
+    @media only screen and (max-width: 27.5em) {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+
+  &__social-link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: currentColor;
+    }
+  }
+
+  &__row-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  &__title {
+    font-size: $default-size;
+    font-weight: 700;
+    font-family: inherit;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    margin: 1rem 0;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-weight: 300;
+      color: $color-white;
+      text-decoration: none;
+      font-size: 1.4rem;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__dropdown {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: $color-white;
+    width: 24rem;
+    padding: 1rem 0;
+    border-radius: 8px;
+    border: 2px solid currentColor;
+    background-color: transparent;
+    outline-color: currentColor;
+    cursor: pointer;
+
+    @media only screen and (max-width: 50em) {
+      width: 100%;
+    }
+  }
+
+  &__dropdown-item {
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: $color-white;
+    background-color: $color-primary;
+    margin: 1rem 0;
+  }
+}

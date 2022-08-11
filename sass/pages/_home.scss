@@ -1,0 +1,333 @@
+.who-we-are {
+  padding: 8rem;
+  @include viewport(tab-port) {
+    padding: 4rem;
+  }
+  @include viewport(phone) {
+    padding: 4rem 2rem;
+  }
+
+  background-color: $color-gray-bg;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    gap: 20rem;
+
+    @include viewport(tab-desk) {
+      gap: 12rem;
+    }
+
+    @include viewport(tab-port) {
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  .emphasis {
+    font-size: 2rem;
+    color: $color-primary;
+    display: block;
+    font-weight: 700;
+  }
+
+  &__left {
+    flex: 0 0 45%;
+
+    @include viewport(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 2rem;
+    flex-wrap: wrap;
+
+    @include viewport(tab-port) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__paragraph {
+    flex: 0 0 45%;
+  }
+}
+
+.what-we-offer {
+  padding: 12rem 8rem;
+
+  @include viewport(tab-desk) {
+    padding: 8rem 4rem;
+  }
+  @include viewport(phone) {
+    padding: 4rem 2rem;
+  }
+
+  background-image: linear-gradient(
+      rgba($color-white, 0.9),
+      rgba($color-white, 0.9)
+    ),
+    url("../img/services-bg-img.png");
+  background-position: center center;
+  background-size: cover;
+
+  &__content-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+  }
+
+  &__content {
+    padding: 4rem;
+    flex: 0 0 30%;
+    background-color: $color-gray-bg;
+    border-radius: 8px;
+    box-shadow: $shadow-1;
+    transition: all 0.4s;
+
+    @include viewport(tab-desk) {
+      flex: 0 0 45%;
+    }
+
+    @media only screen and (max-width: 50em) {
+      flex: 0 0 100%;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: $shadow-2;
+        transform: scale(1.05) translateY(4px);
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 2rem;
+
+    font-weight: 700;
+  }
+
+  .paragraph {
+    @include viewport(phone) {
+      hyphens: auto;
+    }
+  }
+}
+
+.mission {
+  padding: 8rem;
+
+  @media only screen and (max-width: 68.75em) {
+    padding: 4rem;
+  }
+
+  @include viewport(phone) {
+    padding: 4rem 2rem;
+  }
+
+  background-image: linear-gradient(
+    to right,
+    $color-white 0%,
+    $color-white 50%,
+    $color-gray-bg 50%
+  );
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+
+    @media only screen and (max-width: 68.75em) {
+      flex-wrap: wrap-reverse;
+    }
+  }
+
+  &__left {
+    flex: 0 0 70%;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    @media only screen and (max-width: 68.75em) {
+      gap: 4rem;
+      flex: 0 0 100%;
+      flex-wrap: wrap;
+    }
+
+    @media only screen and (max-width: 50em) {
+      gap: 4rem;
+    }
+  }
+
+  &__img-box {
+    @media only screen and (max-width: 68.75em) {
+      height: 40rem;
+      overflow: hidden;
+    }
+
+    @include viewport(tab-port) {
+      height: 28rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+  }
+
+  &__content {
+    padding: 4rem;
+
+    background-color: $color-gray-bg;
+    border-radius: 8px;
+    box-shadow: $shadow-1;
+    transition: all 0.4s;
+
+    @media only screen and (max-width: 68.75em) {
+      flex-basis: 80%;
+    }
+
+    @media only screen and (max-width: 50em) {
+      flex-basis: 100%;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: $shadow-2;
+        transform: scale(1.05) translateY(4px);
+      }
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+
+    font-weight: 700;
+  }
+
+  .paragraph {
+    @include viewport(phone) {
+      hyphens: auto;
+    }
+  }
+}
+
+.why-us {
+  padding: 8rem;
+
+  @include viewport(tab-port) {
+    flex-wrap: wrap;
+  }
+
+  @include viewport(phone) {
+    padding: 8rem 2rem;
+  }
+
+  background-color: $color-white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+
+  @media only screen and (max-width: 68.75em) {
+    gap: 4rem;
+  }
+
+  &__left {
+    flex: 0 0 40%;
+
+    @media only screen and (max-width: 68.75em) {
+      flex: 0 0 50%;
+    }
+
+    @include viewport(tab-port) {
+      flex: 0 0 70%;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.contact-us {
+  padding: 12rem 8rem;
+
+  @include viewport(tab-desk) {
+    padding: 8rem 4rem;
+  }
+  @include viewport(phone) {
+    padding: 4rem 2rem;
+  }
+
+  background-color: $color-gray-bg;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  &__img-box {
+    width: 100%;
+
+    @include viewport(tab-desk) {
+      width: 60%;
+    }
+
+    @include viewport(tab-port) {
+      width: 80%;
+    }
+
+    @include viewport(phone) {
+      width: 100%;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    display: block;
+  }
+
+  &__right {
+    padding: 4rem;
+    background-color: $color-gray-bg;
+    box-shadow: $shadow-1;
+    border-radius: 8px;
+    flex: 0 0 55%;
+
+    @include viewport(tab-desk) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+
+    @include viewport(tab-desk) {
+      flex-wrap: wrap;
+      gap: 4rem;
+    }
+  }
+}

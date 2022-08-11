@@ -1,0 +1,98 @@
+html {
+  //1 rem == 10px
+  font-size: 62.5%;
+}
+
+//PROJECT WIDE DECLARATION
+:root {
+  --color-primary: #007a69;
+  --color-primary-dark: #00584c;
+
+  --color-gray-text: #757575;
+  --color-gray-text-2: #9c9c9c;
+
+  --color-gray-light: #ababab;
+
+  --color-gray-bg: #f9f9fb;
+  --color-gray-bg-2: #e5e5e5;
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --shadow-1: 0 1rem 4rem rgba(0, 0, 0, 0.2);
+
+  --shadow-2: 0 1rem 6rem rgba(0, 0, 0, 0.2);
+
+  --shadow-3: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+
+  --default-size: 1.6rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  font-size: $default-size;
+  line-height: 1.6;
+
+  @include viewport(big-desk) {
+    margin: 0 auto;
+  }
+}
+
+//BASIC RESET
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+//SELECTING TEXTS
+::selection {
+  color: $color-white;
+  background-color: $color-primary-dark;
+}
+
+//COMPONENTS
+
+//LOGO
+.logo,
+.icon,
+.social-icon,
+.arr-down {
+  display: inline-block;
+}
+
+.logo {
+  width: 12.5rem;
+  height: 5rem;
+  cursor: pointer;
+
+  @media only screen and (max-width: 50em) {
+    margin-left: 2rem;
+  }
+}
+
+//ICONS
+.icon {
+  width: 6.4rem;
+  height: 6.4rem;
+
+  @media (hover: hover) {
+    &:hover {
+      //ANIMATION USAGE
+      animation: rotate 2s ease;
+    }
+  }
+}
+
+.social-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.arr-down {
+  width: 3.6rem;
+  height: 3.6rem;
+}

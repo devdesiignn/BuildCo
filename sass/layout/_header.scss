@@ -1,0 +1,154 @@
+.header {
+  background-image: url("../img/svg/header-bg-img.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: $color-white;
+  overflow: hidden;
+
+  &__menu-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+
+    @media only screen and (max-width: 50em) {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    @media only screen and (max-width: 50em) {
+      display: none;
+    }
+
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    font-weight: 300;
+
+    color: $color-gray-text;
+    padding: 2rem;
+
+    @include viewport(tab-desk) {
+      padding: 1rem;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        color: $color-primary;
+        font-weight: 400;
+      }
+    }
+
+    &--active {
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__btn-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+
+    @include viewport(tab-desk) {
+      gap: 1rem;
+    }
+
+    @include viewport(tab-port) {
+      display: none;
+    }
+  }
+
+  &__content {
+    // ANIMATION USAGE
+    animation: fadeInUp 2s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 4rem;
+    gap: 16rem;
+
+    @include viewport(tab-desk) {
+      padding-top: 4rem;
+      gap: 6rem;
+    }
+
+    @include viewport(tab-port) {
+      gap: 4rem;
+    }
+
+    @media only screen and (max-width: 50em) {
+      padding: 4rem;
+    }
+
+    @include viewport(phone) {
+      padding: 4rem 2rem;
+    }
+  }
+
+  &__hero-img-box {
+    flex: 0 0 35%;
+    overflow: hidden;
+
+    @media only screen and (max-width: 50em) {
+      display: none;
+    }
+  }
+
+  &__hero-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  &__form-input {
+    border: none;
+    border-radius: 8px;
+    box-shadow: $shadow-1;
+    font-family: inherit;
+    font-size: inherit;
+
+    width: 32rem;
+    padding: 1rem 2rem;
+    margin-right: 2rem;
+    outline: 2px solid $color-primary;
+    transition: all 0.4s;
+
+    @include viewport(tab-port) {
+      width: 28rem;
+    }
+
+    &::-webkit-input-placeholder {
+      color: $color-gray-text-2;
+    }
+
+    &::-moz-placeholder {
+      color: $color-gray-text-2;
+    }
+
+    &:-ms-input-placeholder {
+      color: $color-gray-text-2;
+    }
+
+    &::-ms-input-placeholder {
+      color: $color-gray-text-2;
+    }
+
+    &::placeholder {
+      color: $color-gray-text-2;
+    }
+  }
+}
